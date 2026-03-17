@@ -14,14 +14,12 @@ Waybar still reads these active files:
 
 ```bash
 ./scripts/apply-waybar-preset.sh default gruvbox
-pkill waybar && waybar &
 ```
 
 Example with the alternate theme:
 
 ```bash
 ./scripts/apply-waybar-preset.sh default forest
-pkill waybar && waybar &
 ```
 
 ## Create a new theme

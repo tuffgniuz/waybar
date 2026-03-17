@@ -26,4 +26,7 @@ cp "$LAYOUT_PATH" "$CONFIG_PATH"
 printf '@import url("themes/current.css");\n@import url("themes/base.css");\n' > "$STYLE_PATH"
 printf '@import url("%s.css");\n' "$THEME_NAME" > "$CURRENT_THEME_PATH"
 
-echo "Applied layout '$LAYOUT_NAME' with theme '$THEME_NAME'."
+pkill waybar 2>/dev/null || true
+nohup waybar >/dev/null 2>&1 &
+
+echo "Applied layout '$LAYOUT_NAME' with theme '$THEME_NAME' and restarted Waybar."
