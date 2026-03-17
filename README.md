@@ -1,4 +1,4 @@
-# Waybar Presets
+# Waybar
 
 This setup is split into two reusable parts:
 
@@ -20,6 +20,21 @@ Example with the alternate theme:
 
 ```bash
 ./scripts/apply-waybar-preset.sh default forest
+```
+
+## Install the global command
+
+Run this once after cloning the repo on a new system:
+
+```bash
+./scripts/install-waybar-theme-command.sh
+```
+
+That installs `waybar-theme` into `~/.local/bin`, so you can switch presets from anywhere:
+
+```bash
+waybar-theme default nord
+waybar-theme default catpuccin
 ```
 
 ## Create a new theme
