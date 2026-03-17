@@ -1,0 +1,177 @@
+* {
+  font-family: Terminess Nerd Font Mono;
+  font-size: 16px;
+}
+
+tooltip {
+  background-color: @tooltip-bg;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+tooltip label {
+  color: @tooltip-fg;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+#cpu,
+#hardware,
+#workspaces,
+#bluetooth,
+#wireplumber,
+#window,
+#clock-tray {
+  background-color: @surface;
+  padding: 0 10px;
+  margin: 10px 5px;
+  border-radius: 15px;
+}
+
+#memory,
+#battery,
+#network,
+#backlight {
+  padding: 0 10px;
+}
+
+#session {
+  background-color: @surface-alt;
+  padding: 0 10px;
+  margin: 10px 5px;
+  border-radius: 15px;
+}
+
+#custom-logout,
+#custom-power {
+  color: @text;
+  padding: 0 12px;
+  border-radius: 15px;
+  transition: background-color 0.2s;
+}
+
+#custom-logout:hover,
+#custom-power:hover {
+  background-color: @surface-hover;
+}
+
+#memory {
+  color: @memory;
+}
+
+#backlight {
+  color: @backlight;
+}
+
+#tray,
+#clock {
+  background-color: transparent;
+}
+
+#tray {
+  padding-right: 15px;
+  color: @tray;
+}
+
+#battery {
+  color: @battery;
+}
+
+#custom-wireguard {
+  font-size: 25px;
+  padding: 0 10px;
+  color: @wireguard;
+}
+
+#network {
+  color: @network;
+}
+
+#bluetooth {
+  color: @bluetooth;
+}
+
+#network.disconnected {
+  border: 1px solid @warning;
+  color: @warning;
+}
+
+#bluetooth.on {
+  color: @bluetooth-on;
+}
+
+#bluetooth.off {
+  color: @critical;
+}
+
+#bluetooth.discovering {
+  color: @bluetooth-on;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#wireplumber {
+  color: @wireplumber;
+}
+
+#clock {
+  color: @text;
+}
+
+#wireplumber.muted {
+  font-weight: bold;
+  color: @critical;
+}
+
+#window {
+  padding: 0 15px;
+  color: @text;
+}
+
+#workspaces {
+  padding: 5px;
+}
+
+#workspaces button {
+  background-color: @workspace-idle;
+  padding: 0 5px;
+  margin: 0 5px;
+  border-radius: 20px;
+  color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+  background-color: @workspace-active;
+  color: @workspace-active-fg;
+  padding: 0 20px;
+  border-radius: 20px;
+}
+
+#workspaces button:hover {
+  background-color: @surface-hover;
+  color: @text;
+  border-radius: 20px;
+}
+
+#workspaces button.urgent {
+  background-color: @warning;
+}
